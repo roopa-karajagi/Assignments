@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+   <head> Plaindrom Example</head>
+   <body>
+      <script type="text/javascript">
+
+function palincheck(palinvar)
+{
+   debugger;
+   var reverse="";
+   console.log(palinvar.length);
+   for(var i=palinvar.length-1;i>=0;i--)
+   {
+      debugger;
+      reverse+= palinvar[i];
+   }
+   console.log(reverse);
+   if(palinvar==reverse)
+   {
+       console.log("Yes! It is Palindrome");
+   }
+   else
+   {
+    console.log("It's not Palindrome");
+   }
+
+}
+
+palincheck("GADAG");
+         </script>
+   </body>
+</html>
+

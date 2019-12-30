@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1> Factorial Function</h1>
+    </head>
+
+    <body>
+        <script>
+            let factorialFun = function(num)
+{
+    // let result=1;
+    // while(num!=0)
+    // {
+    //     result= (result * num)
+    //     num--;
+    // }
+    // return result;
+    if(num == 0)
+    {
+        return 1;
+    }
+    while(num!=0)
+    {
+    return num*factorialFun(num-1)
+    }
+}
+
+console.log(factorialFun(5));
+            </script>
+    </body>
+</html>

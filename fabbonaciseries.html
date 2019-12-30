@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        Fabbonci Series
+    </head>
+
+    <script type="text/javascript">
+
+    function fabSeries(fabNum)
+    {
+      
+        let fabResult=[0,1];
+        for(var i=2;i<=fabNum;i++)
+        { 
+            fabResult.push(fabResult[i-2]+fabResult[i-1])
+        }
+        console.log(fabResult);
+    }
+    fabSeries(3);
+
+    </script>
+</html>

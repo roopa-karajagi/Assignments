@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> dynamic fields</title>
+<style type="text/css">
+    table
+    {
+        background-color:red;
+    }
+</style>
+    
+</head>
+
+</html>
+
+<body id="static">
+    
+    <script type="text/javascript">
+    //to create dynamic column with for loop
+    //TO create dynamic Table
+    
+        students = [{ id: 1, Name: "Roopa", Age: 18}, //table creation
+        { id: 2, Name: "xyz", Age: 19 ,},
+        { id: 3, Name: "abc", Age: 20 },
+        { id: 4, Name: "pqr", Age: 21 }];
+
+        console.log(students.length);
+        var visible=true;
+        
+        function tablecreate() 
+        {
+            debugger;
+            //we  can create the class in the runtime
+            var bodyelement=document.getElementById('static');
+            var table=document.createElement('table')
+            
+            for (i = 0; i < students.length; i++) 
+            {
+                var row = document.createElement('tr');
+                row.setAttribute("Id","val")
+                console.log(students[i]);
+                  var col=[];
+                  
+                    for(let k in students[i])
+                    {
+                        //var th=document.createElement('th');
+                        //th.innerHTML=k;
+                        td= document.createElement('td');
+                        td.innerHTML=students[i][k];
+                        row.appendChild(td);
+                        table.appendChild(row);
+                        //th.appendChild(row);
+                        
+                        bodyelement.appendChild(table);
+                        
+                    }
+                    //need to create button here. 
+            var add='<button type="button" id="togglee" value="Togglee" >YYYYIUIUIUI</button>'
+            var Editbutton='<button type="button" id="test" onclick="myfun()">Click Me!</button>'
+            function myfun()
+        {
+            visible=!visible;
+        
+            if(visible) {
+            document.getElementById('togglee').style.visibility = 'visible';
+            
+        } else {
+            document.getElementById('togglee').style.visibility = 'hidden';
+        }
+        }
+                   
+                }
+                //col1.innerHTML=students[i].id
+                //row.appendChild(col1);
+                //table.appendChild(row);
+                //col2.innerHTML=students[i].Name
+                //row.appendChild(col2);
+                //table.appendChild(row);
+                //col3.innerHTML=students[i].Age
+                //row.appendChild(col3);
+                //table.appendChild(row);
+                // for (j = 0; j < 3; j++) {
+                    
+                //     var col = document.createElement('td');
+                // }
+        }
+    
+        tablecreate();
+    </script>
+</body>
